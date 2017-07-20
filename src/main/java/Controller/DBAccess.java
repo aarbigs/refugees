@@ -105,7 +105,7 @@ public class DBAccess {
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
             connection = DriverManager.getConnection("jdbc:mysql://localhost/world_bank?" +
-                    "user=root&password=sp6der67&useSSL=false");
+                    "user=root&password=?&useSSL=false");
             System.out.println("connection succeeded");
         } catch (ClassNotFoundException cnf){
             cnf.printStackTrace();
@@ -182,7 +182,7 @@ public class DBAccess {
             // Setup the connection with the DB
             System.out.println("Signing into database...");
             connection = DriverManager.getConnection("jdbc:mysql://localhost?" +
-                    "user=root&password=sp6der67&useSSL=false");
+                    "user=root&password=?&useSSL=false");
 
             // Statements allow to issue SQL queries to the database
             statement = connection.createStatement();
